@@ -3,7 +3,7 @@ function load() {
 }
 
 function process(obj) {
-    document.getElementById("error").innerHTML = "<p>Sent!</p><hr>";
+    document.getElementById("error").innerHTML = "<p>Sent! Refresh to see your prayer.</p><hr>";
     if (obj.result == "error") {
         document.getElementById("error").innerHTML = "<p>An Error has occured: " + obj.error.message + "</p><hr>";
     }
