@@ -11,6 +11,9 @@ function process(obj) {
         html = html.concat("<span id=\"n" + String(i) + "\" class=\"name\">By " + obj.name[i] + " - " + obj.likes[i] + " people prayed for this</span><br>");
         html = html.concat("<button id=\"b" + String(i) + "\" class=\"pray\" onclick=\"like(" + String(i) + ");\">I prayed for this</button><hr>");
     }
+    if (obj.prayer.length == 0) {
+        html = html.concat("<span>No prayers have been submitted yet</span>");
+    }
     document.getElementById("prayers").innerHTML = html;
 }
 
