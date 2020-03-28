@@ -12,7 +12,6 @@ function process(obj) {
         html = html.concat("<button id=\"b" + String(i) + "\" class=\"pray\" onclick=\"like(" + String(i) + ");\">I prayed for this</button><hr>");
     }
     document.getElementById("prayers").innerHTML = html;
-    console.log(obj);
 }
 
 function request() {
@@ -46,10 +45,8 @@ function like(index) {
     };
     request.onreadystatechange = function() {
         if (request.readyState == 4 && request.status == 200) {
-            console.log(JSON.parse(request.responseText));
         }
     };
-    console.log(index);
     request.send(JSON.stringify({
         index: index
     }));
